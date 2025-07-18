@@ -1,0 +1,280 @@
+/* Базові стилі для всього документа */
+body {
+    font-family: 'Arial', sans-serif; /* Виберіть шрифт, який вам подобається */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333; /* Основний колір тексту */
+    background-color: #f4fdf4; /* Дуже світлий зеленуватий фон сторінки */
+}
+
+/* Загальні стилі для контейнерів, щоб обмежити ширину контенту */
+main, header, footer {
+    max-width: 1200px; /* Максимальна ширина контенту */
+    margin: 0 auto; /* Центрування на сторінці */
+    padding: 20px;
+}
+
+/* --- Хедер (шапка сайту) --- */
+header {
+    background-color: #fff;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e0ffe0; /* Світло-зелена лінія */
+    display: flex; /* Для вирівнювання елементів в шапці */
+    justify-content: space-between; /* Рознесе лого і навігацію по краях */
+    align-items: center; /* Вирівнювання по центру вертикально */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Легка тінь для об'єму */
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #28a745; /* Насичений зелений для лого */
+    text-decoration: none; /* Прибрати підкреслення */
+}
+
+nav ul {
+    list-style: none; /* Прибрати маркери списку */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Елементи навігації в один ряд */
+}
+
+nav ul li {
+    margin-left: 25px; /* Відстань між пунктами меню */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Плавна зміна кольору при наведенні */
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #28a745; /* Колір при наведенні або активний пункт */
+}
+
+/* --- Секція Hero (Наші Послуги) --- */
+#hero-services {
+    background-color: #28a745; /* Основний зелений для Hero секції */
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+    margin-bottom: 30px;
+}
+
+#hero-services h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+#hero-services p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* --- Секції з контентом (категорії, список послуг, переваги) --- */
+section {
+    background-color: #fff;
+    padding: 40px 20px;
+    margin-bottom: 30px;
+    border-radius: 8px; /* Закруглені кути */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Легка тінь */
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 40px;
+    position: relative; /* Для підкреслення */
+}
+
+/* Додавання підкреслення до заголовків секцій */
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #28a745; /* Зелене підкреслення */
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* --- Сітка для категорій послуг --- */
+.category-grid, .advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Автоматична адаптація колонок */
+    gap: 30px; /* Відстань між елементами сітки */
+}
+
+.category-item, .advantage-item {
+    background-color: #f0fff0; /* Дуже світлий зеленуватий фон для карток */
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анімація при наведенні */
+}
+
+.category-item:hover, .advantage-item:hover {
+    transform: translateY(-5px); /* Ефект підняття при наведенні */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.category-item h3, .advantage-item h3 {
+    color: #28a745; /* Зелений колір для заголовків карток */
+    font-size: 1.6em;
+    margin-bottom: 15px;
+}
+
+.category-item p, .advantage-item p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* --- Стилі для окремих блоків послуг --- */
+.service-item {
+    background-color: #fff;
+    padding: 35px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border: 1px solid #e0ffe0; /* Світло-зелена рамка */
+}
+
+.service-item h2 {
+    text-align: left; /* Заголовки послуг вирівнюємо по лівому краю */
+    font-size: 2em;
+    color: #28a745; /* Зелений колір для заголовків послуг */
+    margin-bottom: 20px;
+}
+.service-item h2::after { /* Прибираємо підкреслення для цих заголовків */
+    display: none;
+}
+
+
+.service-item ul {
+    list-style: disc; /* Маркери для списку */
+    padding-left: 25px;
+    margin-bottom: 20px;
+}
+
+.service-item ul li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.service-item p {
+    margin-bottom: 15px;
+}
+
+.service-item strong {
+    color: #000; /* Жирний текст, щоб виділити */
+}
+
+/* --- Кнопки --- */
+.btn {
+    display: inline-block;
+    background-color: #28a745; /* Зелений фон кнопок */
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #218838; /* Темніший зелений при наведенні */
+    transform: translateY(-2px);
+}
+
+.btn.primary-btn { /* Додатковий стиль для головної кнопки */
+    font-size: 1.2em;
+    padding: 15px 30px;
+    margin-top: 20px;
+}
+
+/* --- Футер --- */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 25px 20px;
+    border-top: 1px solid #444;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #28a745; /* Зелений колір при наведенні на посилання в футері */
+}
+
+/* --- Медіа-запити для адаптивності (Responsive Design) --- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 5px 10px;
+    }
+
+    #hero-services h1 {
+        font-size: 2.5em;
+    }
+
+    section h2 {
+        font-size: 1.8em;
+    }
+
+    .category-grid, .advantages-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    #hero-services {
+        padding: 50px 15px;
+    }
+
+    #hero-services h1 {
+        font-size: 2em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .btn.primary-btn {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+
+    .service-item {
+        padding: 25px 15px;
+    }
+}

@@ -1,0 +1,356 @@
+/* Базові стилі для всього документа */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4fdf4; /* Дуже світлий зеленуватий фон сторінки */
+}
+
+/* Загальні стилі для контейнерів, щоб обмежити ширину контенту */
+main, header, footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- Хедер (шапка сайту) --- */
+header {
+    background-color: #fff;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e0ffe0; /* Світло-зелена лінія */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #28a745; /* Насичений зелений для лого */
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #28a745; /* Колір при наведенні або активний пункт */
+}
+
+/* --- Секція Hero (Контакти) --- */
+#hero-contacts {
+    background-color: #28a745; /* Основний зелений для Hero секції */
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+    margin-bottom: 30px;
+}
+
+#hero-contacts h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+#hero-contacts p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* --- Секції з контентом --- */
+section {
+    background-color: #fff;
+    padding: 40px 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* Додавання підкреслення до заголовків секцій */
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #28a745; /* Зелене підкреслення */
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* --- Сітка для контактної інформації --- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.contact-item {
+    background-color: #f0fff0; /* Дуже світлий зеленуватий фон для карток */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.contact-item h3 {
+    color: #28a745; /* Зелений колір для заголовків карток контактів */
+    font-size: 1.6em;
+    margin-bottom: 15px;
+}
+
+.contact-item p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.contact-item a {
+    color: #28a745; /* Зелений колір для посилань (тел/email) */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #218838; /* Темніший зелений при наведенні */
+}
+
+/* --- Стилі для форми зворотного зв'язку --- */
+#contact-form form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9fdf9; /* Легкий зеленуватий фон форми */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: calc(100% - 20px); /* Віднімаємо padding, щоб не виходило за межі */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    outline: none; /* Прибираємо стандартне підсвічування при фокусі */
+    transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    border-color: #28a745; /* Зелена рамка при фокусі */
+}
+
+.form-group textarea {
+    resize: vertical; /* Дозволяє змінювати розмір по вертикалі */
+}
+
+/* --- Карта --- */
+#location-map {
+    text-align: center;
+}
+
+#location-map iframe {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* --- Соціальні мережі --- */
+#social-media .social-links-big {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    min-width: 120px; /* Мінімальна ширина для кнопок */
+    text-align: center;
+}
+
+.social-btn.facebook {
+    background-color: #3b5998; /* Стандартний синій Facebook */
+}
+.social-btn.facebook:hover {
+    background-color: #2d4373;
+    transform: translateY(-2px);
+}
+
+.social-btn.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); /* Градієнт Instagram */
+}
+.social-btn.instagram:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.social-btn.linkedin {
+    background-color: #007bb5; /* Стандартний синій LinkedIn */
+}
+.social-btn.linkedin:hover {
+    background-color: #005f87;
+    transform: translateY(-2px);
+}
+/* Додайте інші соціальні мережі, якщо потрібно, зі своїми кольорами */
+
+
+/* --- Кнопки (загальні стилі) --- */
+.btn {
+    display: inline-block;
+    background-color: #28a745; /* Зелений фон кнопок */
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #218838; /* Темніший зелений при наведенні */
+    transform: translateY(-2px);
+}
+
+.btn.primary-btn { /* Додатковий стиль для головної кнопки */
+    font-size: 1.2em;
+    padding: 15px 30px;
+    margin-top: 20px;
+}
+
+/* --- Футер --- */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 25px 20px;
+    border-top: 1px solid #444;
+}
+
+.social-links-footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links-footer a:hover {
+    color: #28a745; /* Зелений колір при наведенні на посилання в футері */
+}
+
+/* --- Медіа-запити для адаптивності (Responsive Design) --- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 5px 10px;
+    }
+
+    #hero-contacts h1 {
+        font-size: 2.5em;
+    }
+
+    section h2 {
+        font-size: 1.8em;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr; /* Одна колонка на мобільних */
+    }
+
+    #contact-form form {
+        padding: 15px;
+    }
+}
+@media (max-width: 480px) {
+    #hero-contacts {
+        padding: 50px 15px;
+    }
+
+    #hero-contacts h1 {
+        font-size: 2em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+    
+    .btn.primary-btn {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+
+    .social-btn {
+        min-width: unset; /* Прибираємо мінімальну ширину на дуже малих екранах */
+        width: 100%; /* Розтягуємо кнопки соц.мереж на всю ширину */
+        margin-bottom: 10px; /* Додаємо відступ між ними */
+    }
+
+    #social-media .social-links-big {
+        flex-direction: column; /* Кнопки соц.мереж в стовпчик на мобільних */
+        align-items: center;
+    }
+}

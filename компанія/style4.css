@@ -1,0 +1,375 @@
+/* Базові стилі для всього документа */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4fdf4; /* Дуже світлий зеленуватий фон сторінки */
+}
+
+/* Загальні стилі для контейнерів, щоб обмежити ширину контенту */
+main, header, footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- Хедер (шапка сайту) --- */
+header {
+    background-color: #fff;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e0ffe0; /* Світло-зелена лінія */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #28a745; /* Насичений зелений для лого */
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #28a745; /* Колір при наведенні або активний пункт */
+}
+
+/* --- Секція Hero (Про нас) --- */
+#hero-about {
+    background-color: #28a745; /* Основний зелений для Hero секції */
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+    margin-bottom: 30px;
+}
+
+#hero-about h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+#hero-about p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+section {
+    background-color: #fff;
+    padding: 40px 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* Додавання підкреслення до заголовків секцій */
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #28a745; /* Зелене підкреслення */
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* --- Секція "Наша історія" --- */
+#our-story .story-content {
+    display: flex;
+    flex-wrap: wrap; /* Для адаптивності */
+    gap: 30px;
+    align-items: center;
+}
+
+#our-story .story-image {
+    flex: 1; /* Зображення займатиме доступний простір */
+    min-width: 300px; /* Мінімальна ширина для зображення перед переходом на новий рядок */
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#our-story .story-text {
+    flex: 2; /* Текст займатиме більше простору */
+    min-width: 300px; /* Мінімальна ширина для тексту */
+}
+
+#our-story p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* --- Місія та цінності --- */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.value-item {
+    background-color: #f0fff0; /* Дуже світлий зеленуватий фон для карток */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.value-item h3 {
+    color: #28a745;
+    font-size: 1.6em;
+    margin-bottom: 15px;
+}
+
+.value-item ul {
+    list-style: disc;
+    padding-left: 25px;
+}
+
+.value-item ul li {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.value-item strong {
+    color: #000;
+}
+
+/* --- Наша команда --- */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.team-member {
+    background-color: #f0fff0; /* Дуже світлий зеленуватий фон для карток команди */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Кругле зображення */
+    object-fit: cover; /* Обрізає зображення, щоб воно повністю заповнило коло */
+    margin-bottom: 15px;
+    border: 3px solid #28a745; /* Зелена рамка навколо фото */
+}
+
+.team-member h3 {
+    color: #28a745;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.team-member .member-bio {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 10px;
+}
+
+.team-cta {
+    text-align: center;
+    margin-top: 30px;
+    font-style: italic;
+    color: #666;
+}
+
+/* --- Наші переваги (повторний блок, щоб уникнути конфліктів) --- */
+/* Ці стилі можна було б об'єднати з category-grid, але для простоти дублюємо тут */
+#our-advantages .advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+#our-advantages .advantage-item {
+    background-color: #f0fff0;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#our-advantages .advantage-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+#our-advantages .advantage-item h3 {
+    color: #28a745;
+    font-size: 1.6em;
+    margin-bottom: 15px;
+}
+
+#our-advantages .advantage-item p {
+    font-size: 1em;
+    color: #666;
+}
+
+
+/* --- Заклик до дії (Call to Action) --- */
+#call-to-action-about {
+    text-align: center;
+}
+#call-to-action-about p {
+    font-size: 1.1em;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+/* --- Кнопки (загальні стилі) --- */
+.btn {
+    display: inline-block;
+    background-color: #28a745; /* Зелений фон кнопок */
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #218838; /* Темніший зелений при наведенні */
+    transform: translateY(-2px);
+}
+
+.btn.primary-btn { /* Додатковий стиль для головної кнопки */
+    font-size: 1.2em;
+    padding: 15px 30px;
+    margin-top: 20px;
+}
+
+/* --- Футер --- */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 25px 20px;
+    border-top: 1px solid #444;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #28a745; /* Зелений колір при наведенні на посилання в футері */
+}
+
+/* --- Медіа-запити для адаптивності (Responsive Design) --- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 5px 10px;
+    }
+
+    #hero-about h1 {
+        font-size: 2.5em;
+    }
+
+    section h2 {
+        font-size: 1.8em;
+    }
+
+    #our-story .story-content {
+        flex-direction: column; /* Зображення над текстом на мобільних */
+    }
+    #our-story .story-image {
+        min-width: unset; /* Скидаємо мінімальну ширину */
+        width: 100%; /* Розтягуємо на всю ширину контейнера */
+    }
+
+    .values-grid, .team-grid, #our-advantages .advantages-grid {
+        grid-template-columns: 1fr; /* Одна колонка на мобільних */
+    }
+}
+
+@media (max-width: 480px) {
+    #hero-about {
+        padding: 50px 15px;
+    }
+
+    #hero-about h1 {
+        font-size: 2em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+    
+    .btn.primary-btn {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+    
+    .team-member img {
+        width: 100px;
+        height: 100px;
+    }
+}
